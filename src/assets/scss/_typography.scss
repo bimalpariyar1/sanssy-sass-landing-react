@@ -1,0 +1,20 @@
+@each $key, $value in $headings {
+    #{$key} {
+        font-size: #{$value}px;
+        font-family: $headings-font-family;
+
+        @each $key-resp, $value-resp in $headings-resp {
+            @if ($key == $key-resp) {
+                @include media_max_767 {
+                    font-size: #{$value-resp}px;
+                }
+            }
+        }
+    }
+
+    .white {
+        #{$key} {
+            color: $light;
+        }
+    }
+}

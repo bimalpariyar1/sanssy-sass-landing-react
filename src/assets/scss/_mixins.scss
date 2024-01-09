@@ -1,0 +1,25 @@
+@mixin media_max_1200 {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin media_max_1024 {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin media_max_992 {
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}
+@mixin media_max_767 {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin media_max_425 {
+    @media only screen and (max-width: 425px) {
+        @content;
+    }
+}

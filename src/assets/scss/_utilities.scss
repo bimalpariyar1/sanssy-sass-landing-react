@@ -1,0 +1,30 @@
+// Spacings
+
+.sp-t {
+    padding-top: $section-pd;
+
+    @include media_max_767 {
+        padding-top: $section-pd-resp;
+    }
+}
+
+.sp-b {
+    padding-bottom: $section-pd;
+    @include media_max_767 {
+        padding-bottom: $section-pd-resp;
+    }
+}
+
+.sp-tb {
+    padding-top: $section-pd;
+    padding-bottom: $section-pd;
+
+    @include media_max_767 {
+        padding-top: $section-pd-resp;
+        padding-bottom: $section-pd-resp;
+    }
+}
+
+.dark-bg {
+    background: $dark;
+}

@@ -1,0 +1,219 @@
+// =============== Forms ===============
+input[type="text"],
+input[type="password"] {
+    background: $theme-color-3;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 20px;
+    width: 100%;
+}
+textarea {
+    background: $theme-color-3;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 20px;
+    width: 100%;
+    min-height: 150px;
+}
+
+.form-divider {
+    width: 100%;
+    height: 1px;
+    background: $border-color;
+    position: relative;
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: $light;
+    }
+}
+
+// =============== Button ===============
+.theme-btn {
+    display: inline-flex;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 24px;
+    -webkit-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    justify-content: center;
+
+    &.button-sm {
+        padding: 10px 16px;
+    }
+
+    &.primary {
+        background: $theme-color-1;
+        color: $light;
+
+        &.outline {
+            background: none;
+            border: 1px solid $theme-color-1;
+            color: $theme-color-1;
+
+            &:hover {
+                background: $dark;
+                color: $light;
+            }
+        }
+    }
+
+    &.white {
+        background: $light;
+        color: $theme-color-1;
+
+        &.outline {
+            background: none;
+            border: 1px solid $light;
+            color: $light;
+
+            &:hover {
+                background: $light;
+                color: $theme-color-1;
+            }
+        }
+    }
+
+    &:hover {
+        background: $dark;
+        color: $light;
+    }
+}
+
+// =============== Icon Boxes ===============
+.iconbox {
+    display: flex;
+
+    &.stack {
+        display: block;
+    }
+
+    .box-icon {
+        i {
+            font-size: 32px;
+
+            background: $theme-color-1;
+            color: $light;
+            padding: 8px;
+            border-radius: 8px;
+        }
+    }
+
+    &.white {
+        .box-icon {
+            i {
+                background: $light;
+                color: $theme-color-1;
+            }
+        }
+    }
+
+    &.type-lg {
+        .box-icon {
+            i {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// =============== Stats Box ===============
+.stat-box {
+    .stat-num {
+        color: $theme-color-1;
+        font-size: 40px;
+    }
+}
+
+// =============== Back To Top ===============
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    background: $theme-color-1;
+    color: $light;
+    border-radius: 50px;
+    padding: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+        background: $dark;
+    }
+
+    .icon-top {
+        .las {
+            font-size: 32px;
+        }
+    }
+    .top-text {
+        font-size: 12px;
+    }
+}
+
+// =============== Preloader ===============
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $theme-color-1;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .lds-ripple {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+
+        div {
+            position: absolute;
+            border: 4px solid #fff;
+            opacity: 1;
+            border-radius: 50%;
+            animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+            &:nth-child(2) {
+                animation-delay: -0.5s;
+            }
+        }
+    }
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}

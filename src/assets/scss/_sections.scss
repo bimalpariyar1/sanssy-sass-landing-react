@@ -1,0 +1,528 @@
+// =============== Site Header ===============
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 32px 0;
+    z-index: 1000;
+    transition: ease all 0.3s;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    .header-right {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        .site-navigation ul li {
+            display: inline-flex;
+            a {
+                padding: 8px 16px;
+                color: $light;
+                cursor: pointer;
+                border-radius: 8px;
+
+                &.active {
+                    color: $dark;
+                    background: $light;
+                }
+
+                &:hover {
+                    color: $dark;
+                    background: $light;
+                }
+            }
+        }
+    }
+}
+
+.site-logo {
+    img {
+        width: 150px;
+    }
+}
+
+.site-header,
+.site-mobile-header {
+    &.sticky-header {
+        padding: 16px 0;
+        background: $theme-color-1;
+    }
+}
+
+.site-mobile-header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 32px 0;
+    transition: ease all 0.3s;
+
+    .mobile-nav-toggle {
+        .las {
+            color: $light;
+            font-size: 32px;
+        }
+    }
+}
+
+.mobile-navigation-wrap {
+    position: fixed;
+    width: 320px;
+    right: -100%;
+    top: 0;
+    z-index: 1000;
+    background: $theme-color-1;
+    height: 100%;
+    transition: ease all 0.3s;
+
+    .nav-header {
+        display: flex;
+        justify-content: flex-end;
+        .las {
+            color: $light;
+            font-size: 32px;
+        }
+    }
+
+    .mobile-nav {
+        ul {
+            li {
+                display: flex;
+                margin-bottom: 16px;
+                a {
+                    padding: 8px 16px;
+                    color: $light;
+                    border-radius: 8px;
+
+                    &.active {
+                        color: $dark;
+                        background: $light;
+                    }
+
+                    &:hover {
+                        color: $dark;
+                        background: $light;
+                    }
+                }
+            }
+        }
+    }
+
+    &.show {
+        right: 0;
+    }
+}
+
+// =============== Site Banner ===============
+.site-banner {
+    position: relative;
+    z-index: 1;
+    .banner-content {
+        margin-top: 200px;
+
+        p {
+            @include media_max_1024 {
+                br {
+                    display: none;
+                }
+            }
+        }
+        .banner-ctas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .banner-checks {
+            @extend .dislay-flex-all-center;
+            gap: 40px;
+            .checks {
+                h4 {
+                    margin-bottom: 0;
+                    color: $light;
+                }
+                @extend .dislay-flex-all-center;
+                .check-icon {
+                    @extend .dislay-flex-all-center;
+                    width: 24px;
+                    height: 24px;
+                    background: #fff;
+                    border-radius: 4px;
+                    color: $theme-color-1;
+                }
+            }
+        }
+    }
+}
+
+// =============== About ===============
+
+.trustie-item {
+    margin: 0 20px;
+}
+
+.about-callout-box {
+    border-radius: 32px;
+
+    .callout-media {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// =============== Features ===============
+
+.feture-content {
+    padding: 0 70px;
+
+    @include media_max_767 {
+        padding: 0;
+    }
+
+    .features-stats {
+        display: flex;
+        gap: 32px;
+    }
+}
+
+// =============== Showcase ===============
+
+.showcase {
+    overflow: hidden;
+
+    .showcase-content {
+        padding: 0 70px;
+        @include media_max_767 {
+            padding: 0;
+        }
+        .check-list {
+            ul {
+                li {
+                    display: inline-flex;
+                    color: $light;
+                    margin-bottom: 16px;
+                    width: 100%;
+
+                    .la-check {
+                        background: $light;
+                        color: $theme-color-1;
+                        width: 25px;
+                        height: 25px;
+                        @extend .dislay-flex-all-center;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .showcase-dashboard-showcase {
+        img {
+            width: auto;
+            max-width: 260%;
+        }
+    }
+}
+
+// =============== Solutions ===============
+.solutions-boxes {
+    border: 1px solid $border-color;
+    border-radius: 16px;
+}
+
+// =============== Testimonials ===============
+
+.testi-image-wrap {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+    .rating-box {
+        background: $theme-color-1;
+        border-radius: 24px;
+        color: $light;
+        position: absolute;
+        right: 32px;
+        bottom: 32px;
+        @extend .dislay-flex-all-center;
+        .rating-num {
+            .num {
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.testimonials-wrap {
+    padding: 0 70px;
+    @include media_max_767 {
+        padding: 0;
+    }
+    .slick-dots {
+        text-align: left;
+        li {
+            button {
+                &:before {
+                    color: $theme-color-1;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
+
+.testimonial-icon {
+    font-family: $headings-font-family;
+    font-weight: 500;
+    font-size: 32px;
+    font-style: italic;
+
+    @extend .dislay-flex-all-center;
+
+    width: 70px;
+    height: 70px;
+    background: $theme-color-1;
+    color: $light;
+    border-radius: 50px;
+}
+
+.testimonie-text {
+    font-size: 24px;
+
+    @include media_max_767 {
+        font-size: 18px;
+    }
+}
+
+.testimonie-meta {
+    .avatar {
+        img {
+            width: 70px;
+        }
+    }
+}
+
+// =============== Pricing Plans ===============
+.pricing-plan {
+    background: $light;
+    border-radius: 16px;
+
+    &.dark-bg {
+        background: $dark;
+    }
+
+    &.paid {
+        .plan-detail {
+            .plan-price {
+                border: 1px solid $dark;
+                color: $dark;
+            }
+        }
+    }
+    .plan-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .plan-head {
+            max-width: 70%;
+        }
+
+        .plan-price {
+            font-size: 32px;
+            border: 1px solid $light;
+            border-radius: 50px;
+            padding: 8px 16px;
+        }
+    }
+}
+
+.customize-plan {
+    background: $light;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    @include media_max_992 {
+        flex-direction: column;
+    }
+
+    .plan-detail {
+        max-width: 50%;
+
+        @include media_max_992 {
+            max-width: 100%;
+        }
+    }
+
+    .plan-customize-image-wrap {
+        text-align: right;
+    }
+}
+
+// =============== Blogs ===============
+
+.blog-article {
+    .blog-thumb-image {
+        border-radius: 16px;
+        overflow: hidden;
+
+        img {
+            @extend .theme-transitions;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .blog-meta {
+        .blog-categories {
+            background: $border-color;
+            padding: 8px 16px;
+            border-radius: 50px;
+            display: inline-flex;
+        }
+    }
+}
+
+.more-blog {
+    display: flex;
+    justify-content: center;
+    .link-wrap {
+        background: $border-color;
+        border-radius: 16px;
+
+        @include media_max_767 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .more-blog-text {
+            @include media_max_767 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+// =============== Faqs ===============
+
+.faq-wrap {
+    display: flex;
+
+    .faq-icon {
+        i {
+            font-size: 32px;
+            background: $theme-color-1;
+            color: $light;
+            padding: 8px;
+            border-radius: 8px;
+        }
+    }
+}
+
+// ===============  Integrations ===============
+
+.integrations-content {
+    padding: 0 0 0 70px;
+    @include media_max_767 {
+        padding: 0;
+    }
+    .intregrates-logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .integrate-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 75px;
+            height: 75px;
+            background: $light;
+            border-radius: 50%;
+            img {
+                max-width: 60%;
+            }
+        }
+    }
+
+    .integrate-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+// =============== Contact ===============
+.contact-form-wrap {
+    padding: 0 0 0 70px;
+    @include media_max_767 {
+        padding: 0;
+    }
+    .contact-form {
+        .form-field {
+            display: flex;
+            .input-field {
+                flex-grow: 1;
+                h5 {
+                    margin-bottom: 0;
+                    font-weight: 500;
+                }
+                input[type="text"] {
+                    background: none;
+                    padding: 8px 0;
+                    font-size: 24px;
+                    border-radius: 0;
+                    border-bottom: 1px solid $border-color;
+                }
+
+                textarea {
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    font-size: 24px;
+                    padding: 8px 0;
+                    min-height: 150px;
+                }
+            }
+        }
+    }
+}
+
+// =============== Footer ===============
+.footer-infos {
+    border-radius: 16px;
+    .footer-logo {
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.footer-links {
+    ul {
+        li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.copy-right {
+    border-top: 1px solid $border-color;
+}

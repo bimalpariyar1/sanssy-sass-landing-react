@@ -1,0 +1,42 @@
+//Fonts
+$body-font-family: "Poppins", sans-serif;
+$headings-font-family: "Urbanist", sans-serif;
+
+//Theme Colors
+$theme-color-1: #0253ee;
+$theme-color-2: #4f4f4f;
+$theme-color-3: #f0eff5;
+$light: #fff;
+$dark: #000;
+$fb-color: #386aed;
+$border-color: #f0eff5;
+
+$success: #4cda64;
+$liked-color: #ea4c89;
+
+$headings: (
+    "h1": "72",
+    "h2": "40",
+    "h3": "32",
+    "h4": "24",
+    "h5": "20",
+    "h6": "18",
+);
+
+$headings-resp: (
+    "h1": "40",
+    "h2": "32",
+    "h3": "24",
+    "h4": "20",
+    "h5": "18",
+    "h6": "16",
+);
+
+//Border Radius
+$br-sm: 24px;
+$br-lg: 32px;
+$br-xl: 40px;
+
+//Spacings
+$section-pd: 100px;
+$section-pd-resp: 75px;

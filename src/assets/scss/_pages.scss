@@ -1,0 +1,280 @@
+// =============== Auth Pages ===============
+.auth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: $theme-color-1;
+        z-index: -1;
+
+        @include media_max_1200 {
+            display: none;
+        }
+    }
+}
+
+.auth-column-content {
+    padding: 100px 70px;
+
+    @include media_max_1024 {
+        padding: 100px 0;
+    }
+    .col-logo {
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.auth-form-submit {
+    button {
+        width: 100%;
+    }
+}
+
+.social-auth {
+    a {
+        display: inline-flex;
+        border-radius: 8px;
+        width: 100%;
+        padding: 16px 24px;
+        justify-content: center;
+        img {
+            margin-right: 16px;
+        }
+        &.google-btn {
+            border: 1px solid $border-color;
+
+            &:hover {
+                background: $border-color;
+                color: $theme-color-2;
+            }
+        }
+
+        &.fb-btn {
+            background: $fb-color;
+            color: $light;
+
+            &:hover {
+                background: $dark;
+            }
+        }
+    }
+}
+
+.register-heading {
+    display: flex;
+    align-items: center;
+
+    .upload-profile-image {
+        min-width: 120px;
+        height: 120px;
+        background: $border-color;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+
+        input[type="file"] {
+            display: none;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .upload-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            i {
+                font-size: 40px;
+            }
+
+            .spinner-border {
+                color: $theme-color-1;
+            }
+        }
+        .button-upload {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+
+            width: 40px;
+            height: 40px;
+            background: $theme-color-1;
+            color: $light;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @extend .theme-transitions;
+        }
+
+        .optional-text {
+            position: absolute;
+        }
+
+        &:hover {
+            .button-upload {
+                background: $dark;
+            }
+        }
+    }
+}
+
+.register-form {
+    .register-terms {
+        .terms-check {
+            display: inline-flex;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            background: $border-color;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            font-size: 12px;
+            @extend .theme-transitions;
+            &.checked {
+                background: $success;
+                color: $light;
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+    }
+}
+
+// =============== Inner Pages Layout ===============
+.inner-page {
+    .inner-banner {
+        padding-top: 200px;
+    }
+}
+
+.blogs-detail {
+    p {
+        margin-bottom: 16px;
+    }
+    img {
+        border-radius: 16px;
+    }
+}
+
+.load-blogs {
+    display: flex;
+    justify-content: center;
+}
+
+// Blog Details
+.quote-text {
+    border-radius: 32px;
+}
+
+.blog-images-group {
+    display: flex;
+    gap: 30px;
+}
+
+.fr1 {
+    max-width: 35%;
+    @include media_max_767 {
+        max-width: 100%;
+    }
+}
+.fr3 {
+    max-width: 65%;
+    @include media_max_767 {
+        max-width: 100%;
+    }
+}
+
+.content-list {
+    ul {
+        li {
+            display: flex;
+            margin-bottom: 8px;
+
+            &:before {
+                content: "\2713";
+                background: $theme-color-1;
+                color: $light;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.blog-comments {
+    .comment-single {
+        display: flex;
+        .user-image {
+            img {
+                max-width: 40px;
+                border-radius: 8px;
+            }
+
+            .user-name-char {
+                width: 40px;
+                height: 40px;
+                background: $theme-color-1;
+
+                @extend .dislay-flex-all-center;
+                color: $light;
+                border-radius: 8px;
+            }
+        }
+        .comment-texts-wrap {
+            flex-grow: 1;
+            .user-meta {
+                h6 {
+                    margin: 0;
+                }
+                .date {
+                }
+                .comment-text {
+                }
+            }
+            .comment-actions {
+                display: flex;
+                gap: 15px;
+                margin-top: 8px;
+                font-size: 14px;
+                .action-link {
+                    cursor: pointer;
+
+                    &.liked {
+                        color: $liked-color;
+                    }
+
+                    &:hover {
+                        color: $theme-color-1;
+                    }
+                }
+            }
+        }
+    }
+}
